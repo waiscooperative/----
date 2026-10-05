@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements | WAIS Staff Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo">
+                    <img src="waiscoop-logo.jpg" alt="WAIS Logo">
+                </a>
+            </div>
+            <div class="sidebar-user">
+                <div class="sidebar-user-info">
+                    <div class="sidebar-user-avatar">AC</div>
+                    <div class="sidebar-user-details">
+                        <h4>Ana Cruz</h4>
+                        <p>STAFF-0001</p>
+                        <span class="staff-role">Cooperative Officer</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item"><a href="staff-dashboard.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M3 4h14v3H3V4zm0 5h8v8H3V9zm10 0h4v8h-4V9z"/></svg>Dashboard</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-members.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zM3 18a7 7 0 1114 0H3z"/></svg>Members</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-savings.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M4 4h10a2 2 0 012 2v2H6a2 2 0 00-2 2v6H4V4zm2 6h10v6H8a2 2 0 01-2-2v-4z"/></svg>Savings</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-loans.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M4 4h10v2H6v10H4V4zm4 6h10v6H8V10z"/></svg>Loans</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-loans.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 002-2v-4a2 2 0 00-2-2h-4a2 2 0 00-2 2v4a2 2 0 002 2h4z" clip-rule="evenodd"/></svg>Gadget Loans</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-announcements.html" class="sidebar-nav-link active"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a6 6 0 00-6 6v3.6L3.3 12.3A1 1 0 004 14h12a1 1 0 00.7-1.7L16 11.6V8a6 6 0 00-6-6zm0 16a3 3 0 01-3-3h6a3 3 0 01-3 3z"/></svg>Announcements</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="sidebar-footer-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.3 9.3a1 1 0 001.4 1.4l3-3a1 1 0 000-1.4l-3-3a1 1 0 10-1.4 1.4L14.6 9H7a1 1 0 100 2h7.6l-1.3 1.3z" clip-rule="evenodd"/></svg>Logout</a>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <div class="dashboard-header-title">
+                    <button class="sidebar-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+                    <h1>Announcements</h1>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="split-panels">
+                    <div class="dashboard-section">
+                        <div class="dashboard-section-header">
+                            <h2 class="dashboard-section-title">Publish notice</h2>
+                        </div>
+                        <form data-demo-form>
+                            <div class="form-group">
+                                <label class="form-label required" for="noticeTitle">Title</label>
+                                <input id="noticeTitle" class="form-control" type="text" required placeholder="Workshop schedule">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label required" for="noticeType">Type</label>
+                                <select id="noticeType" class="form-select" required>
+                                    <option>General</option>
+                                    <option>Workshop</option>
+                                    <option>Deadline</option>
+                                    <option>Store</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label required" for="noticeBody">Message</label>
+                                <textarea id="noticeBody" class="form-textarea" rows="5" required placeholder="Write the announcement members will see."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" data-demo-action="publish">Publish</button>
+                        </form>
+                    </div>
+                    <div class="dashboard-section">
+                        <div class="dashboard-section-header">
+                            <h2 class="dashboard-section-title">Posted</h2>
+                        </div>
+                        <div class="announcements-list">
+                            <div class="announcement-item">
+                                <div class="announcement-item-meta">
+                                    <span class="badge badge-success">New</span>
+                                    <span class="announcement-item-date">Sep 3, 2026</span>
+                                </div>
+                                <h4>Member Orientation</h4>
+                                <p>Learn about WAIS membership benefits on February 15 at San Isidro Community Center.</p>
+                            </div>
+                            <div class="announcement-item">
+                                <div class="announcement-item-meta">
+                                    <span class="badge badge-info">Update</span>
+                                    <span class="announcement-item-date">Aug 28, 2026</span>
+                                </div>
+                                <h4>General Assembly</h4>
+                                <p>Cooperative formation meeting on March 5 at Antipolo City Hall.</p>
+                            </div>
+                            <div class="announcement-item">
+                                <div class="announcement-item-meta">
+                                    <span class="badge badge-warning">Event</span>
+                                    <span class="announcement-item-date">Aug 20, 2026</span>
+                                </div>
+                                <h4>Financial Literacy Workshop</h4>
+                                <p>Budgeting basics on May 10 at San Roque Barangay Hall.</p>
+                            </div>
+                            <div class="announcement-item">
+                                <div class="announcement-item-meta">
+                                    <span class="badge badge-info">Update</span>
+                                    <span class="announcement-item-date">Aug 15, 2026</span>
+                                </div>
+                                <h4>Loan payment reminder</h4>
+                                <p>September dues can be paid at the WAIS desk during office hours.</p>
+                            </div>
+                            <div class="announcement-item">
+                                <div class="announcement-item-meta">
+                                    <span class="badge badge-warning">Store</span>
+                                    <span class="announcement-item-date">Aug 10, 2026</span>
+                                </div>
+                                <h4>Printer restock</h4>
+                                <p>Inkjet printers are back in limited quantity for members.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="main.js"></script>
+    <script src="dashboard.js"></script>
+    <script>
+        function publishAnnouncement() {
+            const title = document.getElementById('noticeTitle').value;
+            const type = document.getElementById('noticeType').value;
+            const body = document.getElementById('noticeBody').value;
+            
+            if (title && type && body) {
+                alert('Announcement published successfully!\n\nTitle: ' + title + '\nType: ' + type + '\nMessage: ' + body.substring(0, 50) + '...\n\nAll members will be notified via email and SMS.');
+                document.querySelector('[data-demo-form]').reset();
+            }
+        }
+
+        function deleteAnnouncement(title) {
+            if (confirm('Are you sure you want to delete this announcement?\n\nTitle: ' + title)) {
+                alert('Announcement deleted successfully.\n\nTitle: ' + title + '\n\nThis action cannot be undone.');
+            }
+        }
+
+        function editAnnouncement(title) {
+            alert('Edit Announcement\n\nThis will open the editor for:\nTitle: ' + title + '\n\nYou can modify the title, type, and message content.');
+        }
+
+        // Add event listener for the publish form
+        document.addEventListener('DOMContentLoaded', function() {
+            const publishForm = document.querySelector('[data-demo-form]');
+            if (publishForm) {
+                publishForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    publishAnnouncement();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

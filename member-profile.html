@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | WAIS Member Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo">
+                    <img src="waiscoop-logo.jpg" alt="WAIS Logo">
+                </a>
+            </div>
+            
+            <div class="sidebar-user">
+                <div class="sidebar-user-info">
+                    <div class="sidebar-user-avatar">JS</div>
+                    <div class="sidebar-user-details">
+                        <h4>Juan Santos</h4>
+                        <p>Member ID: WAIS-0001</p>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item">
+                        <a href="member-dashboard.html" class="sidebar-nav-link">
+                            <svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" fill="currentColor"/>
+                            </svg>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="member-profile.html" class="sidebar-nav-link active">
+                            <svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" fill="currentColor"/>
+                            </svg>
+                            My Profile
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="member-membership.html" class="sidebar-nav-link">
+                            <svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" fill="currentColor"/>
+                            </svg>
+                            Membership
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="member-savings.html" class="sidebar-nav-link">
+                            <svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 002-2v-4a2 2 0 00-2-2h-4a2 2 0 00-2 2v4a2 2 0 002 2h4z" clip-rule="evenodd" fill="currentColor"/>
+                            </svg>
+                            Savings
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="member-loans.html" class="sidebar-nav-link">
+                            <svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 002-2v-4a2 2 0 00-2-2h-4a2 2 0 00-2 2v4a2 2 0 002 2h4z" clip-rule="evenodd" fill="currentColor"/>
+                            </svg>
+                            Loans
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="member-loans.html" class="sidebar-nav-link">
+                            <svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 002-2v-4a2 2 0 00-2-2h-4a2 2 0 00-2 2v4a2 2 0 002 2h4z" clip-rule="evenodd" fill="currentColor"/>
+                            </svg>
+                            Gadget Loans
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="member-financial-literacy.html" class="sidebar-nav-link">
+                            <svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 00.356-.257l4-1.714a1 1 0 11.788 1.838l-2.727 1.17 1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 010-2.62 1 1 0 01.89-.89 8.968 8.968 0 001.05-.174V6.877l-1.69.726a1 1 0 00-.629.928v.191a1 1 0 001.059.928l.541-.232zM17 10.12v-3.24a1 1 0 00-.629-.928l-1.69-.726v4.102a8.968 8.968 0 001.05.174 1 1 0 01.89.89 11.115 11.115 0 010 2.62 1 1 0 01-.89.89 8.969 8.969 0 00-1.05.174V10.12l1.69-.726a1 1 0 00.629-.928v-.191a1 1 0 00-1.059-.928l-.541.232z" fill="currentColor"/>
+                            </svg>
+                            Financial Literacy
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="member-notifications.html" class="sidebar-nav-link">
+                            <svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" fill="currentColor"/>
+                            </svg>
+                            Notifications
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="member-support.html" class="sidebar-nav-link">
+                            <svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1V8a1 1 0 011-1V6a1 1 0 011-1H8a1 1 0 00-1 1v2a1 1 0 001 1v1a1 1 0 11-2 0v-1a1 1 0 011-1V8a3 3 0 015.866-1z" clip-rule="evenodd" fill="currentColor"/>
+                            </svg>
+                            Support
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="member-settings.html" class="sidebar-nav-link">
+                            <svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 1.852-.395 2.286-1.56.38 1.56 2.6 1.56 2.98 0a1.532 1.532 0 012.286-.948c1.372.836 2.942-.734 2.106-2.106-.54-.886-.061-1.852.395-2.286zm-3.7 6.83a1.532 1.532 0 00-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 1.852.395 2.286 1.56.38 1.56 2.6 1.56 2.98 0a1.532 1.532 0 012.286-.948c1.372.836 2.942-.734 2.106-2.106-.54-.886-.061-1.852.395-2.286z" clip-rule="evenodd" fill="currentColor"/>
+                            </svg>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="index.html" class="sidebar-footer-link">
+                    <svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd" fill="currentColor"/>
+                    </svg>
+                    Logout
+                </a>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <div class="dashboard-header-title">
+                    <button class="sidebar-toggle" aria-label="Toggle sidebar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <h1>My Profile</h1>
+                </div>
+                <div class="dashboard-header-actions">
+                    <div class="notification-bell">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C13.6569 22 15 20.6569 15 19H9C9 20.6569 10.3431 22 12 22Z" fill="currentColor"/>
+                            <path d="M18 16V11C18 7.68629 15.3137 5 12 5C8.68629 5 6 7.68629 6 11V16L4 18V19H20V18L18 16Z" fill="currentColor"/>
+                        </svg>
+                        <span class="notification-badge">3</span>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="dashboard-content">
+                <!-- Profile Header -->
+                <div class="dashboard-section">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <div class="profile-avatar-large">JS</div>
+                        </div>
+                        <div class="profile-info">
+                            <h2>Juan Santos</h2>
+                            <p class="text-muted">Member ID: WAIS-0001</p>
+                            <div class="profile-status">
+                                <span class="badge badge-success">Active Member</span>
+                                <span class="text-muted">Since January 15, 2026</span>
+                            </div>
+                        </div>
+                        <div class="profile-actions">
+                            <button class="btn btn-primary" onclick="editProfile()">Edit Profile</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Personal Information -->
+                <div class="dashboard-section">
+                    <div class="dashboard-section-header">
+                        <h2 class="dashboard-section-title">Personal Information</h2>
+                        <div class="dashboard-section-action">
+                            <button class="btn btn-outline btn-sm" onclick="editPersonalInfo()">Edit</button>
+                        </div>
+                    </div>
+                    <div class="profile-info-grid grid-2">
+                        <div class="info-item">
+                            <div class="info-label">Full Name</div>
+                            <div class="info-value">Juan Santos</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Date of Birth</div>
+                            <div class="info-value">March 15, 2002</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Gender</div>
+                            <div class="info-value">Male</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Email Address</div>
+                            <div class="info-value">juan.santos@email.com</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Contact Number</div>
+                            <div class="info-value">+63 912 345 6789</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Address</div>
+                            <div class="info-value">123 Main Street, Barangay San Roque, Antipolo City, Rizal</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Academic Information -->
+                <div class="dashboard-section">
+                    <div class="dashboard-section-header">
+                        <h2 class="dashboard-section-title">Academic Information</h2>
+                        <div class="dashboard-section-action">
+                            <button class="btn btn-outline btn-sm" onclick="editAcademicInfo()">Edit</button>
+                        </div>
+                    </div>
+                    <div class="profile-info-grid grid-2">
+                        <div class="info-item">
+                            <div class="info-label">Student ID</div>
+                            <div class="info-value">2023-12345</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">School/University</div>
+                            <div class="info-value">Antipolo City University</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Course/Program</div>
+                            <div class="info-value">Bachelor of Science in Computer Science</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Year Level</div>
+                            <div class="info-value">3rd Year</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Membership Information -->
+                <div class="dashboard-section">
+                    <div class="dashboard-section-header">
+                        <h2 class="dashboard-section-title">Membership Information</h2>
+                    </div>
+                    <div class="membership-info-grid grid-3">
+                        <div class="info-card card">
+                            <div class="card-body text-center">
+                                <div class="info-card-label">Membership Status</div>
+                                <div class="info-card-value"><span class="badge badge-success">Active</span></div>
+                                <div class="info-card-sub">In good standing</div>
+                            </div>
+                        </div>
+                        <div class="info-card card">
+                            <div class="card-body text-center">
+                                <div class="info-card-label">Savings Account</div>
+                                <div class="info-card-value"><span class="badge badge-success">Active</span></div>
+                                <div class="info-card-sub">Account: SAV-0001</div>
+                            </div>
+                        </div>
+                        <div class="info-card card">
+                            <div class="card-body text-center">
+                                <div class="info-card-label">Loan Status</div>
+                                <div class="info-card-value"><span class="badge badge-warning">Active Loan</span></div>
+                                <div class="info-card-sub">1 active loan</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sample Data Notice -->
+                <div class="notice-card card" style="background-color: #FFF3CD; border-left-color: #ffc107;">
+                    <div class="card-body">
+                        <p class="mb-2" style="color: #856404;">
+                            <strong>Note:</strong> This profile displays sample/demo data for demonstration purposes.
+                        </p>
+                        <p style="color: #856404;">
+                            Actual member data will be available upon cooperative operation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="dashboard.js"></script>
+    <script>
+        function editProfile() {
+            alert('Edit Profile\n\nYou can update the following information:\n- Personal details\n- Contact information\n- Academic information\n- Profile picture\n\nChanges will be reviewed by staff before approval.');
+        }
+
+        function editPersonalInfo() {
+            alert('Edit Personal Information\n\nYou can update:\n- Full Name\n- Date of Birth\n- Gender\n- Email Address\n- Contact Number\n- Address\n\nPlease ensure all information is accurate.');
+        }
+
+        function editAcademicInfo() {
+            alert('Edit Academic Information\n\nYou can update:\n- Student ID\n- School/University\n- Course/Program\n- Year Level\n\nPlease provide valid proof of enrollment for any changes.');
+        }
+    </script>
+</body>
+</html>

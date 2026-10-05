@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members | WAIS Staff Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo">
+                    <img src="waiscoop-logo.jpg" alt="WAIS Logo">
+                </a>
+            </div>
+            <div class="sidebar-user">
+                <div class="sidebar-user-info">
+                    <div class="sidebar-user-avatar">AC</div>
+                    <div class="sidebar-user-details">
+                        <h4>Ana Cruz</h4>
+                        <p>STAFF-0001</p>
+                        <span class="staff-role">Cooperative Officer</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item"><a href="staff-dashboard.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M3 4h14v3H3V4zm0 5h8v8H3V9zm10 0h4v8h-4V9z"/></svg>Dashboard</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-members.html" class="sidebar-nav-link active"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zM3 18a7 7 0 1114 0H3z"/></svg>Members</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-savings.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M4 4h10a2 2 0 012 2v2H6a2 2 0 00-2 2v6H4V4zm2 6h10v6H8a2 2 0 01-2-2v-4z"/></svg>Savings</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-loans.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M4 4h10v2H6v10H4V4zm4 6h10v6H8V10z"/></svg>Loans</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-loans.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 002-2v-4a2 2 0 00-2-2h-4a2 2 0 00-2 2v4a2 2 0 002 2h4z" clip-rule="evenodd"/></svg>Gadget Loans</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-announcements.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a6 6 0 00-6 6v3.6L3.3 12.3A1 1 0 004 14h12a1 1 0 00.7-1.7L16 11.6V8a6 6 0 00-6-6zm0 16a3 3 0 01-3-3h6a3 3 0 01-3 3z"/></svg>Announcements</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="sidebar-footer-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.3 9.3a1 1 0 001.4 1.4l3-3a1 1 0 000-1.4l-3-3a1 1 0 10-1.4 1.4L14.6 9H7a1 1 0 100 2h7.6l-1.3 1.3z" clip-rule="evenodd"/></svg>Logout</a>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <div class="dashboard-header-title">
+                    <button class="sidebar-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+                    <h1>Membership desk</h1>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="dashboard-section">
+                    <div class="dashboard-section-header">
+                        <h2 class="dashboard-section-title">Pending applications</h2>
+                    </div>
+                    <div class="dashboard-toolbar">
+                        <input type="search" class="form-control" placeholder="Search applicant or barangay" data-table-search="#pending-members">
+                        <select class="form-select" data-table-filter="#pending-members">
+                            <option value="">All statuses</option>
+                            <option value="review">For review</option>
+                            <option value="incomplete">Incomplete</option>
+                        </select>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table" id="pending-members">
+                            <thead>
+                                <tr>
+                                    <th>Applicant</th>
+                                    <th>Barangay</th>
+                                    <th>School</th>
+                                    <th>Submitted</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-status="review">
+                                    <td>Liza Ramos</td>
+                                    <td>San Roque</td>
+                                    <td>University of Rizal</td>
+                                    <td>Sep 3, 2026</td>
+                                    <td><span class="badge badge-warning">For review</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button type="button" class="btn btn-primary btn-sm" data-demo-action="approve">Approve</button>
+                                            <button type="button" class="btn btn-outline btn-sm" data-demo-action="reject">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-status="incomplete">
+                                    <td>Paolo Cruz</td>
+                                    <td>Dalig</td>
+                                    <td>Antipolo Institute</td>
+                                    <td>Sep 2, 2026</td>
+                                    <td><span class="badge badge-info">Incomplete</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button type="button" class="btn btn-outline btn-sm" data-demo-action="save">Request docs</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-status="review">
+                                    <td>Kara Mendoza</td>
+                                    <td>San Jose</td>
+                                    <td>College of Antipolo</td>
+                                    <td>Sep 1, 2026</td>
+                                    <td><span class="badge badge-warning">For review</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button type="button" class="btn btn-primary btn-sm" data-demo-action="approve">Approve</button>
+                                            <button type="button" class="btn btn-outline btn-sm" data-demo-action="reject">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="dashboard-section">
+                    <div class="dashboard-section-header">
+                        <h2 class="dashboard-section-title">Active members</h2>
+                    </div>
+                    <div class="dashboard-toolbar">
+                        <input type="search" class="form-control" placeholder="Search member ID or name" data-table-search="#active-members">
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table" id="active-members">
+                            <thead>
+                                <tr>
+                                    <th>Member ID</th>
+                                    <th>Name</th>
+                                    <th>Barangay</th>
+                                    <th>Savings</th>
+                                    <th>Loan</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>WAIS-0001</td>
+                                    <td>Juan Santos</td>
+                                    <td>San Roque</td>
+                                    <td>₱5,250.00</td>
+                                    <td>₱2,250.00</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td>WAIS-0008</td>
+                                    <td>Mia Delgado</td>
+                                    <td>San Isidro</td>
+                                    <td>₱3,100.00</td>
+                                    <td>₱750.00</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td>WAIS-0014</td>
+                                    <td>Carlo Bautista</td>
+                                    <td>Dalig</td>
+                                    <td>₱1,800.00</td>
+                                    <td>—</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td>WAIS-0021</td>
+                                    <td>Elena Navarro</td>
+                                    <td>San Jose</td>
+                                    <td>₱6,400.00</td>
+                                    <td>—</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="main.js"></script>
+    <script src="dashboard.js"></script>
+    <script>
+        function viewMemberDetails(memberId) {
+            alert('Member Details - ' + memberId + '\n\nFull Name: Juan Santos\nMember ID: WAIS-0001\nBarangay: San Roque\nStatus: Active\nSavings Balance: ₱5,250.00\nActive Loans: 1\n\nContact: +63 912 345 6789\nEmail: juan.santos@email.com');
+        }
+
+        function approveMember(memberId) {
+            if (confirm('Are you sure you want to approve this membership application?')) {
+                alert('Membership approved successfully!\n\nMember ID: ' + memberId + '\nWelcome email will be sent automatically.');
+            }
+        }
+
+        function rejectMember(memberId) {
+            const reason = prompt('Enter rejection reason:', 'Incomplete documentation');
+            if (reason) {
+                alert('Membership application rejected.\n\nMember ID: ' + memberId + '\nReason: ' + reason + '\nNotification will be sent to applicant.');
+            }
+        }
+    </script>
+</body>
+</html>

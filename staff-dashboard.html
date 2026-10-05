@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard | WAIS Cooperative</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo">
+                    <img src="waiscoop-logo.jpg" alt="WAIS Logo">
+                </a>
+            </div>
+            <div class="sidebar-user">
+                <div class="sidebar-user-info">
+                    <div class="sidebar-user-avatar">AC</div>
+                    <div class="sidebar-user-details">
+                        <h4>Ana Cruz</h4>
+                        <p>STAFF-0001</p>
+                        <span class="staff-role">Cooperative Officer</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item"><a href="staff-dashboard.html" class="sidebar-nav-link active"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M3 4h14v3H3V4zm0 5h8v8H3V9zm10 0h4v8h-4V9z"/></svg>Dashboard</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-members.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zM3 18a7 7 0 1114 0H3z"/></svg>Members</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-savings.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M4 4h10a2 2 0 012 2v2H6a2 2 0 00-2 2v6H4V4zm2 6h10v6H8a2 2 0 01-2-2v-4z"/></svg>Savings</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-loans.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M4 4h10v2H6v10H4V4zm4 6h10v6H8V10z"/></svg>Loans</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-loans.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 002-2v-4a2 2 0 00-2-2h-4a2 2 0 00-2 2v4a2 2 0 002 2h4z" clip-rule="evenodd"/></svg>Gadget Loans</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-announcements.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a6 6 0 00-6 6v3.6L3.3 12.3A1 1 0 004 14h12a1 1 0 00.7-1.7L16 11.6V8a6 6 0 00-6-6zm0 16a3 3 0 01-3-3h6a3 3 0 01-3 3z"/></svg>Announcements</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="sidebar-footer-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.3 9.3a1 1 0 001.4 1.4l3-3a1 1 0 000-1.4l-3-3a1 1 0 10-1.4 1.4L14.6 9H7a1 1 0 100 2h7.6l-1.3 1.3z" clip-rule="evenodd"/></svg>Logout</a>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <div class="dashboard-header-title">
+                    <button class="sidebar-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+                    <h1>Staff overview</h1>
+                </div>
+                <div class="dashboard-header-actions">
+                    <span class="badge badge-info">Staff portal</span>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="dashboard-cards">
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-icon members">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 20a8 8 0 0116 0" stroke="#124b36" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <div class="dashboard-card-label">Active members</div>
+                        <div class="dashboard-card-value">128</div>
+                        <div class="dashboard-card-sub">4 barangays served</div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-icon pending">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 8v5l3 2M12 22a10 10 0 100-20 10 10 0 000 20z" stroke="#856404" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <div class="dashboard-card-label">Pending applications</div>
+                        <div class="dashboard-card-value">6</div>
+                        <div class="dashboard-card-sub">3 membership · 3 loans</div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-icon savings">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 0l4 4m-4-4l-4 4" stroke="#124b36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="dashboard-card-label">Savings this month</div>
+                        <div class="dashboard-card-value">₱48,750</div>
+                        <div class="dashboard-card-sub">92 recorded deposits</div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-icon loans">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h10M4 17h7" stroke="#856404" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <div class="dashboard-card-label">Active loans</div>
+                        <div class="dashboard-card-value">₱186,000</div>
+                        <div class="dashboard-card-sub">41 accounts on schedule</div>
+                    </div>
+                </div>
+
+                <div class="split-panels">
+                    <div class="dashboard-section">
+                        <div class="dashboard-section-header">
+                            <h2 class="dashboard-section-title">Tasks needing action</h2>
+                            <div class="dashboard-section-action">
+                                <a href="staff-members.html" class="btn btn-outline btn-sm" onclick="viewTaskQueue()">View queue</a>
+                            </div>
+                        </div>
+                        <div class="task-list">
+                            <div class="task-item">
+                                <div>
+                                    <h4>Membership review · Liza Ramos</h4>
+                                    <p>San Roque · submitted Sep 3, 2026</p>
+                                </div>
+                                <a href="staff-members.html" class="btn btn-primary btn-sm" onclick="reviewMembership()">Review</a>
+                            </div>
+                            <div class="task-item">
+                                <div>
+                                    <h4>Loan evaluation · Juan Santos</h4>
+                                    <p>₱3,500 tuition assistance · documents complete</p>
+                                </div>
+                                <a href="staff-loans.html" class="btn btn-primary btn-sm" onclick="evaluateLoan()">Review</a>
+                            </div>
+                            <div class="task-item">
+                                <div>
+                                    <h4>Record savings deposit</h4>
+                                    <p>Walk-in member waiting at the counter</p>
+                                </div>
+                                <a href="staff-savings.html" class="btn btn-outline btn-sm" onclick="recordDeposit()">Record</a>
+                            </div>
+                            <div class="task-item">
+                                <div>
+                                    <h4>Store restock · notebooks</h4>
+                                    <p>Quantity on hand is below 10</p>
+                                </div>
+                                <a href="staff-store.html" class="btn btn-outline btn-sm" onclick="updateInventory()">Update</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-section">
+                        <div class="dashboard-section-header">
+                            <h2 class="dashboard-section-title">Today</h2>
+                        </div>
+                        <div class="today-stats">
+                            <div class="today-stat">
+                                <div class="loan-status-label">Deposits recorded</div>
+                                <div class="loan-status-value">14</div>
+                            </div>
+                            <div class="today-stat">
+                                <div class="loan-status-label">Loan payments</div>
+                                <div class="loan-status-value">7</div>
+                            </div>
+                            <div class="today-stat">
+                                <div class="loan-status-label">New inquiries</div>
+                                <div class="loan-status-value">5</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-section">
+                    <div class="dashboard-section-header">
+                        <h2 class="dashboard-section-title">Recent staff activity</h2>
+                        <div class="dashboard-section-action">
+                            <button class="btn btn-outline btn-sm" onclick="exportActivityLog()">Export Log</button>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Staff</th>
+                                    <th>Action</th>
+                                    <th>Member</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4:12 PM</td>
+                                    <td>Ana Cruz</td>
+                                    <td>Savings deposit</td>
+                                    <td>Juan Santos</td>
+                                    <td>₱500.00</td>
+                                </tr>
+                                <tr>
+                                    <td>3:40 PM</td>
+                                    <td>Ana Cruz</td>
+                                    <td>Loan payment</td>
+                                    <td>Mia Delgado</td>
+                                    <td>₱750.00</td>
+                                </tr>
+                                <tr>
+                                    <td>2:05 PM</td>
+                                    <td>Ana Cruz</td>
+                                    <td>Approved membership</td>
+                                    <td>Carlo Bautista</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>11:20 AM</td>
+                                    <td>Ana Cruz</td>
+                                    <td>Store order released</td>
+                                    <td>Liza Ramos</td>
+                                    <td>₱1,200.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="main.js"></script>
+    <script src="dashboard.js"></script>
+    <script>
+        function viewTaskQueue() {
+            alert('Task Queue Overview\n\nCurrent pending tasks:\n- 3 membership applications\n- 3 loan applications\n- 2 inventory updates\n- 1 support ticket\n\nTotal: 9 pending items');
+        }
+
+        function reviewMembership() {
+            alert('Membership Review - Liza Ramos\n\nApplication Details:\n- Name: Liza Ramos\n- Barangay: San Roque\n- Submitted: Sep 3, 2026\n- Status: Pending Review\n\nRequired Documents:\n✓ Student ID\n✓ Proof of Address\n✓ Enrollment Form\n\nRecommendation: Approve');
+        }
+
+        function evaluateLoan() {
+            alert('Loan Evaluation - Juan Santos\n\nLoan Details:\n- Amount: ₱3,500\n- Purpose: Tuition assistance\n- Member: WAIS-0001\n- Current Balance: ₱5,250\n\nEvaluation:\n✓ Good payment history\n✓ Sufficient savings balance\n✓ Valid purpose\n\nRecommendation: Approve at 3% interest');
+        }
+
+        function recordDeposit() {
+            const amount = prompt('Enter deposit amount:', '500');
+            const memberId = prompt('Enter member ID:', 'WAIS-0001');
+            if (amount && memberId && !isNaN(amount)) {
+                alert('Deposit recorded successfully!\n\nMember: ' + memberId + '\nAmount: ₱' + parseFloat(amount).toFixed(2) + '\nDate: ' + new Date().toLocaleDateString());
+            }
+        }
+
+        function updateInventory() {
+            alert('Inventory Update - Notebooks\n\nCurrent Status:\n- Product: Notebooks\n- Quantity on hand: 8\n- Reorder level: 10\n\nAction Required:\n- Restock quantity: 50\n- Supplier: Office Depot\n- Estimated delivery: 3-5 business days');
+        }
+
+        function exportActivityLog() {
+            alert('Activity Log Export\n\nExporting staff activity log:\n- Date range: Today\n- Format: CSV\n- Includes: Time, Staff, Action, Member, Amount\n\nFile will be downloaded shortly.');
+        }
+    </script>
+</body>
+</html>

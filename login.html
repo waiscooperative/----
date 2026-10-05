@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | WAIS Cooperative</title>
+    <meta name="description" content="Login to WAIS Cooperative member portal to access your dashboard, savings, loans, and other services.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-content">
+                    <a href="index.html" class="nav-logo">
+                        <img src="waiscoop-logo.jpg" alt="WAIS Logo">
+                    </a>
+                    
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="services.html" class="nav-link dropdown-toggle">Services</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <span class="dropdown-item">Education Loans</span>
+                                    <ul class="dropdown-submenu">
+                                        <li><a href="loans.html" class="dropdown-item">Micro Loans</a></li>
+                                        <li><a href="loans.html" class="dropdown-item">Gadget Loans</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="savings.html" class="dropdown-item">Savings Program</a></li>
+                                <li><a href="financial-literacy.html" class="dropdown-item">Financial Literacy Program</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="membership.html" class="nav-link">Membership</a></li>
+                        <li><a href="announcements.html" class="nav-link">Announcements</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li><a href="login.html" class="nav-link btn btn-primary btn-sm">Login</a></li>
+                    </ul>
+
+                    <button class="nav-toggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Login</h1>
+                <p>Access your WAIS member portal</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Form -->
+    <section>
+        <div class="container">
+            <div class="login-container">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Portal Login</h2>
+                        <p class="text-muted" id="loginSubtitle">Sign in to access the member dashboard</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="login-role-tabs" role="tablist">
+                            <button type="button" class="login-role-tab active" data-role="member">Member</button>
+                            <button type="button" class="login-role-tab" data-role="staff">Staff</button>
+                        </div>
+                        <form id="loginForm" class="login-form">
+                            <input type="hidden" id="loginRole" name="role" value="member">
+                            <div class="form-group">
+                                <label for="email" class="form-label required">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required>
+                                <div class="error-message">Please enter a valid email address.</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password" class="form-label required">Password</label>
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+                                <div class="error-message">This field is required.</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="form-options">
+                                    <label class="remember-me">
+                                        <input type="checkbox" name="remember">
+                                        <span>Remember me</span>
+                                    </label>
+                                    <a href="#" class="forgot-password">Forgot password?</a>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Sign In</button>
+                            </div>
+                        </form>
+                        
+                        <div class="login-divider">
+                            <span>or</span>
+                        </div>
+                        
+                        <div class="register-link text-center">
+                            <p>Don't have an account?</p>
+                            <a href="register.html" class="btn btn-outline btn-sm">Apply for Membership</a>
+                        </div>
+                        
+                        <div class="member-credentials text-center" id="memberCredentials">
+                            <div class="card" style="background: linear-gradient(135deg, rgba(4, 35, 76, 0.05) 0%, rgba(18, 75, 54, 0.05) 100%); border: 1px solid var(--primary-navy); padding: 16px; margin-top: 16px;">
+                                <h4 style="color: var(--primary-navy); margin-bottom: 8px; font-size: 0.9rem;">Sample Member Account</h4>
+                                <p style="margin: 4px 0; font-size: 0.85rem;"><strong>Email:</strong> member@wais.coop</p>
+                                <p style="margin: 4px 0; font-size: 0.85rem;"><strong>Password:</strong> member123</p>
+                            </div>
+                        </div>
+                        
+                        <div class="staff-credentials text-center" id="staffCredentials" style="display: none;">
+                            <div class="card" style="background: linear-gradient(135deg, rgba(4, 35, 76, 0.05) 0%, rgba(18, 75, 54, 0.05) 100%); border: 1px solid var(--primary-green); padding: 16px; margin-top: 16px;">
+                                <h4 style="color: var(--primary-green); margin-bottom: 8px; font-size: 0.9rem;">Sample Staff Account</h4>
+                                <p style="margin: 4px 0; font-size: 0.85rem;"><strong>Email:</strong> staff@wais.coop</p>
+                                <p style="margin: 4px 0; font-size: 0.85rem;"><strong>Password:</strong> staff123</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="section-navy">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2>New to WAIS?</h2>
+                <p class="mb-4">Apply for membership to access our services.</p>
+                <div class="cta-actions">
+                    <a href="register.html" class="btn btn-primary btn-lg">Apply for Membership</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid grid-4">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <span class="logo-name text-navy">WAIS</span>
+                        <span class="logo-tagline text-green">Cooperative</span>
+                    </div>
+                    <p class="mt-2">
+                        Wise Assistance for Inclusive Undergraduate Students' Savings and Credit
+                    </p>
+                    <p class="text-muted mt-2">
+                        Financial support designed for students in Upper Antipolo City.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About WAIS</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="requirements.html">Requirements</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="loans.html">Education Loans</a></li>
+                        <li><a href="savings.html">Savings Program</a></li>
+                        <li><a href="financial-literacy.html">Financial Literacy Program</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p class="mb-2">
+                        <strong>Location:</strong><br>
+                        Second Floor E & H Building, Manuel L. Quezon Ext, Dalig, Antipolo, 1870 Rizal
+                    </p>
+                    <div class="footer-staff-login mt-3">
+                        <a href="login.html" class="btn btn-secondary btn-sm">Staff Login</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Login form validation
+        document.querySelectorAll('.login-role-tab').forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.login-role-tab').forEach(function(item) {
+                    item.classList.remove('active');
+                });
+                tab.classList.add('active');
+                document.getElementById('loginRole').value = tab.getAttribute('data-role');
+                document.getElementById('loginSubtitle').textContent = tab.getAttribute('data-role') === 'staff'
+                    ? 'Sign in to the staff desk'
+                    : 'Sign in to access the member dashboard';
+                var registerLink = document.querySelector('.register-link');
+                var divider = document.querySelector('.login-divider');
+                var memberCredentials = document.getElementById('memberCredentials');
+                var staffCredentials = document.getElementById('staffCredentials');
+                if (registerLink && divider) {
+                    var isStaff = tab.getAttribute('data-role') === 'staff';
+                    registerLink.style.display = isStaff ? 'none' : '';
+                    divider.style.display = isStaff ? 'none' : '';
+                    if (memberCredentials) {
+                        memberCredentials.style.display = isStaff ? 'none' : 'block';
+                    }
+                    if (staffCredentials) {
+                        staffCredentials.style.display = isStaff ? 'block' : 'none';
+                    }
+                }
+            });
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (validateForm(this)) {
+                var role = document.getElementById('loginRole').value;
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+                
+                // Check sample credentials
+                var validCredentials = false;
+                if (role === 'staff' && email === 'staff@wais.coop' && password === 'staff123') {
+                    validCredentials = true;
+                } else if (role === 'member' && email === 'member@wais.coop' && password === 'member123') {
+                    validCredentials = true;
+                }
+                
+                if (validCredentials) {
+                    var destination = role === 'staff' ? 'staff-dashboard.html' : 'member-dashboard.html';
+                    showNotification('Login successful! Opening the ' + role + ' dashboard...', 'success');
+                    setTimeout(function() {
+                        window.location.href = destination;
+                    }, 800);
+                } else {
+                    showNotification('Invalid credentials. Please check your email and password.', 'error');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

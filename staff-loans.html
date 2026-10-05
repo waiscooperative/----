@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loans | WAIS Staff Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo">
+                    <img src="waiscoop-logo.jpg" alt="WAIS Logo">
+                </a>
+            </div>
+            <div class="sidebar-user">
+                <div class="sidebar-user-info">
+                    <div class="sidebar-user-avatar">AC</div>
+                    <div class="sidebar-user-details">
+                        <h4>Ana Cruz</h4>
+                        <p>STAFF-0001</p>
+                        <span class="staff-role">Cooperative Officer</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item"><a href="staff-dashboard.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M3 4h14v3H3V4zm0 5h8v8H3V9zm10 0h4v8h-4V9z"/></svg>Dashboard</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-members.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zM3 18a7 7 0 1114 0H3z"/></svg>Members</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-savings.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M4 4h10a2 2 0 012 2v2H6a2 2 0 00-2 2v6H4V4zm2 6h10v6H8a2 2 0 01-2-2v-4z"/></svg>Savings</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-loans.html" class="sidebar-nav-link active"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M4 4h10v2H6v10H4V4zm4 6h10v6H8V10z"/></svg>Loans</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-loans.html" class="sidebar-nav-link active"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 002-2v-4a2 2 0 00-2-2h-4a2 2 0 00-2 2v4a2 2 0 002 2h4z" clip-rule="evenodd"/></svg>Gadget Loans</a></li>
+                    <li class="sidebar-nav-item"><a href="staff-announcements.html" class="sidebar-nav-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a6 6 0 00-6 6v3.6L3.3 12.3A1 1 0 004 14h12a1 1 0 00.7-1.7L16 11.6V8a6 6 0 00-6-6zm0 16a3 3 0 01-3-3h6a3 3 0 01-3 3z"/></svg>Announcements</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="sidebar-footer-link"><svg class="sidebar-nav-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.3 9.3a1 1 0 001.4 1.4l3-3a1 1 0 000-1.4l-3-3a1 1 0 10-1.4 1.4L14.6 9H7a1 1 0 100 2h7.6l-1.3 1.3z" clip-rule="evenodd"/></svg>Logout</a>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <div class="dashboard-header-title">
+                    <button class="sidebar-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+                    <h1>Loan desk</h1>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="dashboard-section">
+                    <div class="dashboard-section-header">
+                        <h2 class="dashboard-section-title">Applications for evaluation</h2>
+                    </div>
+                    <div class="dashboard-toolbar">
+                        <input type="search" class="form-control" placeholder="Search member or purpose" data-table-search="#loan-apps">
+                        <select class="form-select" data-table-filter="#loan-apps">
+                            <option value="">All stages</option>
+                            <option value="review">For review</option>
+                            <option value="investigation">Credit investigation</option>
+                        </select>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table" id="loan-apps">
+                            <thead>
+                                <tr>
+                                    <th>Member</th>
+                                    <th>Purpose</th>
+                                    <th>Amount</th>
+                                    <th>Stage</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-status="review">
+                                    <td>Juan Santos</td>
+                                    <td>Tuition assistance</td>
+                                    <td>₱3,500.00</td>
+                                    <td><span class="badge badge-warning">For review</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button type="button" class="btn btn-primary btn-sm" data-demo-action="approve">Approve</button>
+                                            <button type="button" class="btn btn-outline btn-sm" data-demo-action="reject">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-status="investigation">
+                                    <td>Paolo Cruz</td>
+                                    <td>Exam fees</td>
+                                    <td>₱2,000.00</td>
+                                    <td><span class="badge badge-info">Credit investigation</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button type="button" class="btn btn-outline btn-sm" data-demo-action="save">Update CI</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-status="review">
+                                    <td>Liza Ramos</td>
+                                    <td>Thesis expenses</td>
+                                    <td>₱4,000.00</td>
+                                    <td><span class="badge badge-warning">For review</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button type="button" class="btn btn-primary btn-sm" data-demo-action="approve">Approve</button>
+                                            <button type="button" class="btn btn-outline btn-sm" data-demo-action="reject">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="split-panels">
+                    <div class="dashboard-section">
+                        <div class="dashboard-section-header">
+                            <h2 class="dashboard-section-title">Record a payment</h2>
+                        </div>
+                        <form data-demo-form>
+                            <div class="form-group">
+                                <label class="form-label required" for="loanAccount">Loan account</label>
+                                <select id="loanAccount" class="form-select" required>
+                                    <option value="">Select account</option>
+                                    <option>LN-0001 · Juan Santos · ₱2,250 remaining</option>
+                                    <option>LN-0008 · Mia Delgado · ₱750 remaining</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label required" for="payAmount">Payment amount (₱)</label>
+                                <input id="payAmount" class="form-control" type="number" min="100" step="50" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Record payment</button>
+                        </form>
+                    </div>
+                    <div class="dashboard-section">
+                        <div class="dashboard-section-header">
+                            <h2 class="dashboard-section-title">Active loans</h2>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Loan ID</th>
+                                        <th>Member</th>
+                                        <th>Balance</th>
+                                        <th>Next due</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>LN-0001</td>
+                                        <td>Juan Santos</td>
+                                        <td>₱2,250.00</td>
+                                        <td>Sep 15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LN-0008</td>
+                                        <td>Mia Delgado</td>
+                                        <td>₱750.00</td>
+                                        <td>Sep 12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LN-0019</td>
+                                        <td>Rico Tan</td>
+                                        <td>₱4,800.00</td>
+                                        <td>Sep 20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="main.js"></script>
+    <script src="dashboard.js"></script>
+    <script>
+        function approveLoan(memberName, amount) {
+            if (confirm('Are you sure you want to approve this loan application?\n\nMember: ' + memberName + '\nAmount: ₱' + amount)) {
+                alert('Loan application approved!\n\nMember: ' + memberName + '\nAmount: ₱' + amount + '\nInterest Rate: 3% per month\n\nLoan agreement will be generated for signature.');
+            }
+        }
+
+        function rejectLoan(memberName, amount) {
+            const reason = prompt('Enter rejection reason:', 'Insufficient savings balance');
+            if (reason) {
+                alert('Loan application rejected.\n\nMember: ' + memberName + '\nAmount: ₱' + amount + '\nReason: ' + reason + '\n\nNotification will be sent to applicant.');
+            }
+        }
+
+        function updateCreditInvestigation(memberName) {
+            alert('Credit Investigation Update\n\nMember: ' + memberName + '\n\nInvestigation Status:\n✓ Employment verified\n✓ Residence confirmed\n✓ References contacted\n✓ Credit history checked\n\nRecommendation: Proceed with approval');
+        }
+
+        // Add event listeners for the buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            const approveButtons = document.querySelectorAll('[data-demo-action="approve"]');
+            const rejectButtons = document.querySelectorAll('[data-demo-action="reject"]');
+            const saveButtons = document.querySelectorAll('[data-demo-action="save"]');
+            
+            approveButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const row = this.closest('tr');
+                    const memberName = row.querySelector('td:first-child').textContent;
+                    const amount = row.querySelector('td:nth-child(3)').textContent;
+                    approveLoan(memberName, amount);
+                });
+            });
+            
+            rejectButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const row = this.closest('tr');
+                    const memberName = row.querySelector('td:first-child').textContent;
+                    const amount = row.querySelector('td:nth-child(3)').textContent;
+                    rejectLoan(memberName, amount);
+                });
+            });
+            
+            saveButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const row = this.closest('tr');
+                    const memberName = row.querySelector('td:first-child').textContent;
+                    updateCreditInvestigation(memberName);
+                });
+            });
+
+            // Handle payment form submission
+            const paymentForm = document.querySelector('[data-demo-form]');
+            if (paymentForm) {
+                paymentForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const account = document.getElementById('loanAccount').value;
+                    const amount = document.getElementById('payAmount').value;
+                    
+                    if (account && amount) {
+                        alert('Payment recorded successfully!\n\nAccount: ' + account + '\nAmount: ₱' + parseFloat(amount).toFixed(2) + '\nDate: ' + new Date().toLocaleDateString() + '\n\nReceipt will be generated.');
+                        this.reset();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | WAIS Cooperative</title>
+    <meta name="description" content="Apply for WAIS membership - Register to become a member and access savings, loans, store, and financial literacy programs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-content">
+                    <a href="index.html" class="nav-logo">
+                        <img src="waiscoop-logo.jpg" alt="WAIS Logo">
+                    </a>
+                    
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="services.html" class="nav-link dropdown-toggle">Services</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <span class="dropdown-item">Education Loans</span>
+                                    <ul class="dropdown-submenu">
+                                        <li><a href="loans.html" class="dropdown-item">Micro Loans</a></li>
+                                        <li><a href="loans.html" class="dropdown-item">Gadget Loans</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="savings.html" class="dropdown-item">Savings Program</a></li>
+                                <li><a href="financial-literacy.html" class="dropdown-item">Financial Literacy Program</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="membership.html" class="nav-link">Membership</a></li>
+                        <li><a href="announcements.html" class="nav-link">Announcements</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li><a href="login.html" class="nav-link btn btn-primary btn-sm">Login</a></li>
+                    </ul>
+
+                    <button class="nav-toggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Membership Application</h1>
+                <p>Apply to become a WAIS member</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="section-light">
+        <div class="container">
+            <div class="registration-container">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Personal Information</h2>
+                        <p class="text-muted">Please fill in your details</p>
+                    </div>
+                    <div class="card-body">
+                        <form id="registrationForm" class="registration-form">
+                            <div class="form-row grid-2">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label required">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Enter your first name" required>
+                                    <div class="error-message">This field is required.</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label required">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Enter your last name" required>
+                                    <div class="error-message">This field is required.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row grid-2">
+                                <div class="form-group">
+                                    <label for="dateOfBirth" class="form-label required">Date of Birth</label>
+                                    <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control" required>
+                                    <div class="error-message">This field is required.</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="gender" class="form-label required">Gender</label>
+                                    <select id="gender" name="gender" class="form-select" required>
+                                        <option value="">Select gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <div class="error-message">This field is required.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label required">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required>
+                                <div class="error-message">Please enter a valid email address.</div>
+                            </div>
+                            
+                            <div class="form-row grid-2">
+                                <div class="form-group">
+                                    <label for="phone" class="form-label required">Contact Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your contact number" required>
+                                    <div class="error-message">This field is required.</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="studentId" class="form-label required">Student ID</label>
+                                    <input type="text" id="studentId" name="studentId" class="form-control" placeholder="Enter your student ID" required>
+                                    <div class="error-message">This field is required.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address" class="form-label required">Address</label>
+                                <input type="text" id="address" name="address" class="form-control" placeholder="Enter your complete address" required>
+                                <div class="error-message">This field is required.</div>
+                            </div>
+                            
+                            <div class="form-row grid-2">
+                                <div class="form-group">
+                                    <label for="barangay" class="form-label required">Barangay</label>
+                                    <select id="barangay" name="barangay" class="form-select" required>
+                                        <option value="">Select your barangay</option>
+                                        <option value="dalig">Dalig</option>
+                                        <option value="san-jose">San Jose</option>
+                                        <option value="san-isidro">San Isidro</option>
+                                        <option value="san-roque">San Roque</option>
+                                    </select>
+                                    <div class="error-message">This field is required.</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="school" class="form-label required">School/University</label>
+                                    <input type="text" id="school" name="school" class="form-control" placeholder="Enter your school/university" required>
+                                    <div class="error-message">This field is required.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="course" class="form-label required">Course/Program</label>
+                                <input type="text" id="course" name="course" class="form-control" placeholder="Enter your course or program" required>
+                                <div class="error-message">This field is required.</div>
+                            </div>
+                            
+                            <div class="form-row grid-2">
+                                <div class="form-group">
+                                    <label for="yearLevel" class="form-label required">Year Level</label>
+                                    <select id="yearLevel" name="yearLevel" class="form-select" required>
+                                        <option value="">Select year level</option>
+                                        <option value="1">1st Year</option>
+                                        <option value="2">2nd Year</option>
+                                        <option value="3">3rd Year</option>
+                                        <option value="4">4th Year</option>
+                                        <option value="5">5th Year</option>
+                                    </select>
+                                    <div class="error-message">This field is required.</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="income" class="form-label">Monthly Allowance/Income (Optional)</label>
+                                    <input type="number" id="income" name="income" class="form-control" placeholder="Enter your monthly allowance">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password" class="form-label required">Password</label>
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Create a password" required>
+                                <div class="error-message">This field is required.</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirmPassword" class="form-label required">Confirm Password</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirm your password" required>
+                                <div class="error-message">Passwords do not match.</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <input type="checkbox" name="terms" required>
+                                    <span>I agree to the <a href="#" class="text-green">Terms of Service</a> and <a href="#" class="text-green">Privacy Policy</a></span>
+                                </label>
+                                <div class="error-message">You must agree to the terms.</div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit Application</button>
+                                <button type="reset" class="btn btn-outline">Clear Form</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Reminder -->
+    <section>
+        <div class="container">
+            <div class="requirements-reminder card">
+                <div class="card-body">
+                    <h3 class="mb-2">Required Documents</h3>
+                    <p class="mb-3">
+                        Please prepare the following documents for submission after completing this form:
+                    </p>
+                    <ul class="feature-list">
+                        <li>Valid government-issued ID</li>
+                        <li>Student ID from current educational institution</li>
+                        <li>Proof of enrollment</li>
+                        <li>Proof of residence</li>
+                        <li>2x2 recent passport-sized photos (2 copies)</li>
+                        <li>Birth certificate (NSO/PSA copy)</li>
+                    </ul>
+                    <p class="text-muted mt-3">
+                        You will be instructed on how to submit these documents after completing the application.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-navy">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2>Already a Member?</h2>
+                <p class="mb-4">Sign in to access your dashboard.</p>
+                <div class="cta-actions">
+                    <a href="login.html" class="btn btn-primary btn-lg">Login</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid grid-4">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <span class="logo-name text-navy">WAIS</span>
+                        <span class="logo-tagline text-green">Cooperative</span>
+                    </div>
+                    <p class="mt-2">
+                        Wise Assistance for Inclusive Undergraduate Students' Savings and Credit
+                    </p>
+                    <p class="text-muted mt-2">
+                        Financial support designed for students in Upper Antipolo City.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About WAIS</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="requirements.html">Requirements</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="loans.html">Education Loans</a></li>
+                        <li><a href="savings.html">Savings Program</a></li>
+                        <li><a href="financial-literacy.html">Financial Literacy Program</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p class="mb-2">
+                        <strong>Location:</strong><br>
+                        Second Floor E & H Building, Manuel L. Quezon Ext, Dalig, Antipolo, 1870 Rizal
+                    </p>
+                    <div class="footer-staff-login mt-3">
+                        <a href="login.html" class="btn btn-secondary btn-sm">Staff Login</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Registration form validation
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Password match validation
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const confirmPasswordError = document.getElementById('confirmPassword').parentElement.querySelector('.error-message');
+            
+            if (password !== confirmPassword) {
+                confirmPasswordError.classList.add('show');
+                document.getElementById('confirmPassword').classList.add('error');
+                return;
+            } else {
+                confirmPasswordError.classList.remove('show');
+                document.getElementById('confirmPassword').classList.remove('error');
+            }
+            
+            if (validateForm(this)) {
+                // Show success message (demo only)
+                showNotification('Application submitted successfully! We will review your application and contact you soon.', 'success');
+                
+                // Reset form after delay
+                setTimeout(() => {
+                    this.reset();
+                    showNotification('This is a demo. Actual processing will begin upon cooperative operation.', 'info');
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>
